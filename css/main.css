@@ -25,11 +25,7 @@ body {
   block-size: calc(100vh - 50px);
   background: url("../images/pattern-background-mobile.svg"), var(--pale-blue);
   background-repeat: no-repeat;
-  /* background: linear-gradient(
-    var(--pale-blue),
-    var(--very-pale-blue),
-    var(--pale-blue)
-  ); */
+  background-size: contain;
   padding: 25px;
 }
 
