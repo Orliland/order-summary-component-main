@@ -1,0 +1,141 @@
+:root {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --white: #ffffff;
+  --shadow: 0px 23px 70px -30px var(--desaturated-blue);
+  --shadow2: 0px 10px 50px -5px var(--desaturated-blue);
+}
+
+body {
+  margin: 0px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  inline-size: calc(100vw - 50px);
+  max-inline-size: 100%;
+  block-size: calc(100vh - 50px);
+  background: url("../images/pattern-background-mobile.svg"), var(--pale-blue);
+  background-repeat: no-repeat;
+  /* background: linear-gradient(
+    var(--pale-blue),
+    var(--very-pale-blue),
+    var(--pale-blue)
+  ); */
+  padding: 25px;
+}
+
+.card {
+  inline-size: 100%;
+  max-inline-size: 425px;
+  background-color: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.card__image {
+  inline-size: 100%;
+}
+
+.card__body {
+  inline-size: calc(100% - 50px);
+  max-inline-size: 335px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.description {
+  text-align: center;
+}
+
+.description__title {
+  margin-block: 5px;
+  color: var(--dark-blue);
+}
+
+.description__text {
+  margin-block: 20px;
+  color: var(--desaturated-blue);
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.plan {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 14px;
+  background-color: var(--very-pale-blue);
+  border-radius: 10px;
+}
+
+.plan__title {
+  font-size: 0.875rem;
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+.plan__price {
+  font-size: 0.875rem;
+  color: var(--desaturated-blue);
+}
+
+.plan__link {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--bright-blue);
+}
+
+.actions {
+  text-align: center;
+}
+
+.actions__next {
+  display: block;
+  margin-block: 25px;
+  padding: 15px;
+  background-color: var(--bright-blue);
+  color: var(--very-pale-blue);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  border-radius: 10px;
+  box-shadow: var(--shadow2);
+}
+
+.actions__cancel {
+  display: inline-block;
+  margin-block-end: 10px;
+  font-weight: 700;
+  color: var(--desaturated-blue);
+  text-align: center;
+  text-decoration: none;
+}
+
+.plan__link:hover,
+.actions__next:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.actions__cancel:hover {
+  color: var(--dark-blue);
+}
+
+@media screen and (min-width: 1300px) {
+  .main {
+    background: url("../images/pattern-background-desktop.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
