@@ -134,7 +134,8 @@ body {
 
 @media screen and (min-width: 1300px) {
   .main {
-    background: url("../images/pattern-background-desktop.svg");
+    background: url("../images/pattern-background-desktop.svg"),
+      var(--pale-blue);
     background-size: contain;
     background-repeat: no-repeat;
   }
